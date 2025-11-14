@@ -8,12 +8,32 @@
 </head>
 <body>
   <main class="wrap">
-    <header class="site-header" role="banner">
-      <div style="font-size:28px; line-height:1">⚕️</div>
-      <div style="flex:1">
-        <h1 id="siteTitle">Health Buddy — Easy Disease Help</h1>
-        <p id="siteSubtitle">Friendly advice and simple tips. Talk to the bot — it listens.</p>
-      </div>
+    <header class="site-header">
+      <header class="site-header" role="banner">
+  <div style="font-size:28px; line-height:1">⚕️</div>
+  <div style="flex:1">
+    <h1 id="siteTitle">Health Buddy — Easy Disease Help</h1>
+    <p id="siteSubtitle">Friendly advice and simple tips. Talk to the bot — it listens.</p>
+  </div>
+
+  <!-- Language selector -->
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+    <label for="langSelect" style="font-size:12px;color:#2b2b2b;font-weight:700;">Language</label>
+    <select id="langSelect" aria-label="Select language" style="padding:8px 10px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);background:#fff;">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी (Hindi)</option>
+      <option value="kn">ಕನ್ನಡ (Kannada)</option>
+      <option value="ta">தமிழ் (Tamil)</option>
+      <option value="te">తెలుగు (Telugu)</option>
+      <option value="ml">മലയാളം (Malayalam)</option>
+      <option value="gu">ગુજરાતી (Gujarati)</option>
+      <option value="bn">বাংলা (Bengali)</option>
+      <option value="bho">भोजपुरी (Bhojpuri)</option>
+      <option value="mr">मराठी (Marathi)</option>
+    </select>
+  </div>
+</header>
+
     </header>
 
     <aside class="left">
@@ -54,18 +74,17 @@
 
     <section class="chat-panel" id="chatPanel">
       <div class="chat-header">
-        <div class="bot-avatar">👨‍⚕️</div>
+        <div class="bot-avatar">👨‍⚕️👩‍⚕️</div>
         <div>
           <div class="bot-title">Health Buddy (Chat)</div>
           <div class="bot-sub">Ask about fever, cough, vaccines & help</div>
         </div>
       </div>
 
-      <!-- note: this id is 'chatbox' to match the simple script.js -->
-      <div class="chatbox" id="chatbox"></div>
+      <div class="chat-body" id="chatBody"></div>
 
       <div class="chat-input">
-        <textarea id="userInput" placeholder="Type your question..." rows="2"></textarea>
+        <textarea id="userInput" placeholder="Type your question..."></textarea>
         <button class="send-btn" id="sendBtn">Send</button>
       </div>
     </section>
