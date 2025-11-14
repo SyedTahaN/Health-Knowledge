@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Buddy — Disease Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="site-header" role="banner">
+      <div style="font-size:28px; line-height:1">⚕️</div>
+      <div style="flex:1">
+        <h1 id="siteTitle">Health Buddy — Easy Disease Help</h1>
+        <p id="siteSubtitle">Friendly advice and simple tips. Talk to the bot — it listens.</p>
+      </div>
+    </header>
+
+    <aside class="left">
+      <div class="card">
+        <h2 class="big-title">How this helps</h2>
+        <p class="lead">Ask questions about fever, cough, vaccines and more. Simple, clear answers.</p>
+        <div class="cta">
+          <button class="btn" onclick="showFAQ()">See Tips</button>
+          <button class="btn light" onclick="startChat()">Chat Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="big-title">Common questions</h3>
+
+        <div class="faq-item">
+          <p class="faq-q">What to do for fever?</p>
+          <p class="faq-a">Give water, keep cool, and visit clinic if fever is high or lasts long.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">How to stop cough spreading?</p>
+          <p class="faq-a">Cover mouth, wash hands, avoid crowds while sick.</p>
+        </div>
+
+        <div class="faq-item">
+          <p class="faq-q">Where to get vaccines?</p>
+          <p class="faq-a">Ask the bot your village name — it shows the nearest clinic.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="big-title">Emergency?</h3>
+        <p class="lead">If someone is very sick, call emergency services quickly.</p>
+        <div><span class="pill">Ambulance: 112</span></div>
+      </div>
+    </aside>
+
+    <section class="chat-panel" id="chatPanel">
+      <div class="chat-header">
+        <div class="bot-avatar">👨‍⚕️</div>
+        <div>
+          <div class="bot-title">Health Buddy (Chat)</div>
+          <div class="bot-sub">Ask about fever, cough, vaccines & help</div>
+        </div>
+      </div>
+
+      <!-- note: this id is 'chatbox' to match the simple script.js -->
+      <div class="chatbox" id="chatbox"></div>
+
+      <div class="chat-input">
+        <textarea id="userInput" placeholder="Type your question..." rows="2"></textarea>
+        <button class="send-btn" id="sendBtn">Send</button>
+      </div>
+    </section>
+
+    <footer>
+      Made with care • Share with your neighbours
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
